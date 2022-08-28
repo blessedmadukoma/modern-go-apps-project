@@ -19,3 +19,7 @@ How to run the project:
 
    - Run the command: `go run cmd/web/*.go`
 </h5>
+
+<!-- Lesson 4 commits -->
+- added [Pat](https://github.com/bmizerany/pat) package to handle routing
+- refactored existing routes using the Pat package
