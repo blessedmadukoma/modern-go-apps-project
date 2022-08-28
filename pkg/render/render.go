@@ -8,6 +8,7 @@ import (
 	"path/filepath"
 
 	"github.com/blessedmadukoma/modern-go-apps/project/pkg/config"
+	"github.com/blessedmadukoma/modern-go-apps/project/pkg/models"
 )
 
 var functions = template.FuncMap{}
@@ -20,9 +21,17 @@ func NewTemplate(a *config.AppConfig) {
 }
 
 // RenderTemplate renders template using html
-func RenderTemplate(w http.ResponseWriter, tmpl string) {
-	// get the template cache from the app config
-	tc := app.TemplateCache
+func RenderTemplate(w http.ResponseWriter, tmpl string, td *models.TemplateData) {
+	var tc map[string]*template.Template
+
+	// use the cached HTML template if in production made
+	if app.UseCache {
+		// get the template cache from the app config
+		tc = app.TemplateCache
+	} else {
+		// if Usecache is false (dev mode), rebuild the cache
+		tc, _ = CreateTemplateCache()
+	}
 
 	t, ok := tc[tmpl]
 	if !ok {
@@ -31,7 +40,7 @@ func RenderTemplate(w http.ResponseWriter, tmpl string) {
 
 	buf := new(bytes.Buffer)
 
-	_ = t.Execute(buf, nil)
+	_ = t.Execute(buf, td)
 
 	_, err := buf.WriteTo(w)
 	if err != nil {
