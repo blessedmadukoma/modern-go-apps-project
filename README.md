@@ -21,5 +21,7 @@ How to run the project:
 </h5>
 
 <!-- Lesson 4 commits -->
-- added [Pat](https://github.com/bmizerany/pat) package to handle routing
-- refactored existing routes using the Pat package
+- swapped the Pat package for (Chi)[https://github.com/go-chi/chi] package
+- refactored existing routes using the Chi package
+- added the middlewares: logger and recoverer
+- Chi gives additional packages of middleware management e.g. logging, recovery
