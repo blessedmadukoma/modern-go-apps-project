@@ -2,7 +2,6 @@
 
 <h4>The Go web application built in the Udemy course: Building modern web applications in Go</h4>
 
-<br>
 <h5>
 How to run the project:
 
