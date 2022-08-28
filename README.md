@@ -1,8 +1,9 @@
 <h1> Modern Go Web App Project </h1>
 
-<h3>The Go web application built in the Udemy course: Building modern web applications in Go
+<h4>The Go web application built in the Udemy course: Building modern web applications in Go</h4>
 
 <br>
+<h5>
 How to run the project:
 
 1. Install Go: 
@@ -18,4 +19,4 @@ How to run the project:
 4. Run the application:
 
    - Run the command: `go run cmd/web/*.go`
-</h3>
+</h5>
