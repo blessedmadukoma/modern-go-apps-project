@@ -20,8 +20,4 @@ How to run the project:
    - Run the command: `go run cmd/web/*.go`
 </h5>
 
-<!-- Lesson 4 commits -->
-- swapped the Pat package for (Chi)[https://github.com/go-chi/chi] package
-- refactored existing routes using the Chi package
-- added the middlewares: logger and recoverer
-- Chi gives additional packages of middleware management e.g. logging, recovery
+<!-- Lesson 5 commits -->
