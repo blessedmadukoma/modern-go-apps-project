@@ -18,6 +18,15 @@ How to run the project:
 4. Run the application:
 
    - Run the command: `go run cmd/web/*.go`
+
+<hr>
+
+Pages and routes:
+
+   - Home page: "/"
+   
+   - About page: "/about"
+
 </h5>
 
 <!-- Lesson 5 commits -->
