@@ -30,3 +30,5 @@ Pages and routes:
 </h5>
 
 <!-- Lesson 5 commits -->
+- added the scs package to handle sessions
+- created a session manager and SessionLoad method to load and save sessions based on request
