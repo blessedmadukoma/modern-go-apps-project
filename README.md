@@ -1,8 +1,7 @@
-<h1> Modern Go Web App Project </h1>
+<h1> Modern Go Web App Project: Bookings Reservation System </h1>
 
-<h4>The Go web application built in the Udemy course: Building modern web applications in Go</h4>
 
-<h5>
+<h3>
 How to run the project:
 
 1. Install Go: 
@@ -27,8 +26,10 @@ Pages and routes:
    
    - About page: "/about"
 
-</h5>
+Specifications:
+- Built in Go 1.18
+- Uses the [chi router](https://github.com/go-chi/chi)
+- Uses [Alex Edwards SCS](https://github.com/alexedwards/scs/v2) session manager
+- Uses [nosurf](https://github.com/justinas/nosurf) to prevent CSRF (Cross-Site Request Forgery) attacks
 
-<!-- Lesson 5 commits -->
-- added the scs package to handle sessions
-- created a session manager and SessionLoad method to load and save sessions based on request
+</h3>
